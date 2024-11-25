@@ -1,97 +1,54 @@
-# Online CV Templete for IS445
+# Analysis Notebook README
 
-This is a resource for [IS445 as of Fall 2022](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/).  It is a way to host an online CV with interactive visualizations.  See the course page for more materials.
+This project contains an analysis notebook (`Workbook.ipynb`) that provides data cleaning, exploration, and visualization to better understand the provided dataset. The analysis is conducted using Python with common data science libraries.
 
-# How to use this repo
+## Project File
 
-## Download & install
+### The Notebook
 
- 1. clone this repo or download the contents
- 1. make sure you have Ruby *properly* installed (see [the course's install instructions](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week09/installation_instructions_week11.html) for this process)
- 1. Install using `bundle install` (see [the course's install instructions](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week09/installation_instructions_week11.html))
- 1. Host locally with `bundle exec jekyll serve` or `bundle exec jekyll serve -l` (live reload)
- 1. Modify files as needed (see sections below)
+The notebook used for this analysis is available in the file `Workbook.ipynb`. It contains:
+- Data Import and Cleaning: Steps to load and preprocess the data.
+- Exploratory Data Analysis (EDA): Visualization and analysis to extract insights.
+- Conclusion: Summary of findings.
 
-## General configurations
+## Instructions for Running the Notebook
 
-Edit info in: _config.yml
+To run the notebook locally, follow these steps:
 
-Some things you should be sure to check
- 1. The "how to use this document" info at the top
- 1. title, description, repository -- basic title and linking info
- 1. baseurl -- in case you want to have it be a sub-page of your main github.io page
- 1. exclude -- this section at the end of the config file, add at will in case you have other things stored in your github.io repo
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/loveandpeace2004/loveandpeace2004.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd loveandpeace2004
+   ```
+3. Install the required Python libraries:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Launch Jupyter Notebook:
+   ```sh
+   jupyter notebook
+   ```
+5. Open `Workbook.ipynb` and run the cells to see the analysis.
 
-## About page
+## Libraries Used
+- `pandas` for data manipulation
+- `matplotlib` and `seaborn` for data visualization
+- `numpy` for numerical operations
 
-Edit info in:
- 1. pages/about.md for your general introduction
- 1. _data/programming-skills.yml to update your your programming skills list
- 1. _data/other-skills.yml to update other skills
- 1. timeline.yml to update the timeline of your CV
- 
-## Projects
+## Data Overview
+The dataset is loaded and processed within the notebook. The data includes features such as:
+- **Feature 1**: Description of feature 1
+- **Feature 2**: Description of feature 2
 
-Add project files in: 
- * `_projects` to add page files
- * `pages/projects.html` under `remote_projects` for links to your github projects.  Note: this will ONLY link to your repos and you must specify the end of your repo URL (see example)
+These features are analyzed to uncover patterns and insights.
 
-You can link both project pages and github repositories.  Github repos will autopopulate, pages allow you to provide more details.
+## Viewing the Project
+To view the analysis without running the code, click the button below:
 
-By default, the project pages go first, but you can modify this if you want any github repos to show up first.
+[![The Analysis](https://img.shields.io/badge/View-The%20Analysis-orange)](https://github.com/loveandpeace2004/loveandpeace2004/blob/main/Workbook.ipynb)
 
-Project pages can be added by adding markdown files in the `_projects` folder.
-
-Project layouts can be modified in `_includes/projects`.
-
-See `_example_projects` folder for more examples from [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU).
-
-## Python notebooks
-
-Generally, you will be linking notebooks that exist in other repositories that are doing analysis.  However for any "loose" notebooks, you can store them in the `python_notebooks` folder.  In theory you can do fancy local linking with it, but it hasn't been implemented yet.
-
-## Altair-saved chart json's
-
-By default these are saved in `assets/json/` and static images are saved in `assets/pngs/`.  See the example 
-
-
-## Blog Posts
-
-All blog posts will be posted by most recent time stamp -- please see the example for a properly formatted file name.
-
-Add blog posts in:
- * `_posts` (see example)
-
-You can see further examples in the `_example_posts` directory.
-
-
-## Sources
-
-This is an amalgamation of [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU) and [4dcu.be](https://github.com/4dcu-be/4dcu.be).
-
-[portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU) was used for:
- * overall style, taking off a few elements -- Blog, About, Projects all are included here
- * also progress bars for skills are modified to contain words, not percentages
- 
-[4dcu.be](https://github.com/4dcu-be/4dcu.be)
- * vega-lite additions -- found in the `_plugins` folder and the vega-added things in `assets/js`
-
-
-# ------------- Old ramblings below -------------
-
-# Info for how this was created
-
-1. Start by searching for Jeykll themes: https://github.com/topics/jekyll-theme
-2. pick the following: https://github.com/YoussefRaafatNasry/portfolYOU
-3. clone and follow the "Installation" instructions here: https://youssefraafatnasry.github.io/portfolYOU/docs/
-4. Added port
-5. remove Gemfile.lock if needed
-trying to install with: bundle install --path ~/.gem
-5. `bundle install` in directory 
-
-
-bundle exec jekyll serve --> without the l for live reload if something else is running?
-
-NOTE!!! it is quite likely that you have to serve the site locally and/or delete _site before pushing for your changes to go live.  I AM NOT SURE.  Have to re-start after you do a change to the config.yml file
-
-
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
