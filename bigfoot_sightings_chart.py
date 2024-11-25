@@ -2,7 +2,7 @@
 import pandas as pd
 import altair as alt
 
-# 读取大脚怪目击事件数据
+
 df = pd.read_csv('bfro_reports_fall2022.csv')
 
 df.rename(columns={
